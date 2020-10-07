@@ -66,3 +66,59 @@ This section has moved here: https://facebook.github.io/create-react-app/docs/de
 ### `npm run build` fails to minify
 
 This section has moved here: https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify
+
+Editor Setup
+You can use any editor but as I personally prefer VS Code. I will give some instructions about how I prefer VS code to be setup for React applications.
+
+Plugins
+I would recommend below plugins for VS Code:
+
+ESLint by Dirk Baeumer
+Prettier - Code formatter by Prettier
+Live Server by Ritwick Dey
+Path Autocomplete by Mithai Vilcu
+Bracket Pair Colorizer by CoenraadS
+Material Icon Theme by Phillipp Kief
+ES7 React/Redux/GraphQL/React-Native snippets - dsznajder
+
+Settings
+I would also recommend below settings for VS Code. You can edit the VS Code settings.json file by simply pressing (CTRL + ,) in Windows or (CMD + ,) in MacOS
+
+{
+"editor.wordWrap": "on",
+"editor.defaultFormatter": "esbenp.prettier-vscode",
+"editor.formatOnSave": true,
+"[javascript]": {
+"editor.formatOnSave": false
+},
+"[javascriptreact]": {
+"editor.formatOnSave": false
+},
+"editor.codeActionsOnSave": {
+"source.fixAll.eslint": true,
+"source.organizeImports": true
+},
+"eslint.alwaysShowStatus": true,
+"javascript.validate.enable": false,
+"prettier.disableLanguages": ["javascript", "javascriptreact"],
+"bracketPairColorizer.colorMode": "Independent",
+"bracketPairColorizer.independentPairColors": [
+["()", ["White"], "Red"],
+["[]", ["Orchid"], "Red"],
+["{}", ["LightSkyBlue"], "Red"]
+],
+"workbench.iconTheme": "material-icon-theme",
+"emmet.triggerExpansionOnTab": true,
+"emmet.includeLanguages": {
+"javascript": "javascriptreact"
+},
+"path-autocomplete.extensionOnImport": true,
+"path-autocomplete.excludedItems": {
+"**/\*.js": {
+"when": "**"
+},
+"**/\*.jsx": {
+"when": "**"
+}
+}
+}
